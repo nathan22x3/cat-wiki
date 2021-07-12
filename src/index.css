@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background-color: #291507;
+    color: #ffffff;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
