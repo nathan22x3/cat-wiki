@@ -6,11 +6,11 @@ import tw from 'twin.macro';
 const LevelBar = ({ label, level = 0, className }) => {
   return (
     <div
-      css={tw`grid grid-cols-[150px 1fr] items-center gap-8`}
+      css={tw`grid grid-cols-[150px 1fr] items-center lg:gap-8`}
       {...{ className }}
     >
-      <span css={tw`font-bold`}>{label}: </span>
-      <div css={tw`flex-1 grid grid-cols-5 gap-x-2`}>
+      <span css={tw`font-bold text-sm lg:text-base`}>{label}: </span>
+      <div css={tw`flex-1 grid grid-cols-5 gap-x-1 lg:gap-x-2`}>
         {new Array(5).fill('level').map(() => (
           <span
             key={`${(Math.random() * 10000).toString(16)}`}
