@@ -6,7 +6,7 @@ import tw from 'twin.macro';
 const Intro = () => {
   return (
     <section
-      css={tw`grid grid-cols-1 items-center gap-10 px-20 my-20 lg:grid-cols-2`}
+      css={tw`grid grid-cols-1 items-center gap-10 pt-12 px-5 pb-12 lg:(grid-cols-2 px-20 my-20)`}
     >
       <div>
         <h2
@@ -27,7 +27,9 @@ const Intro = () => {
           </span>
         </Link>
       </div>
-      <div css={tw`grid grid-cols-[3fr 9fr 9fr] grid-rows-[auto 1fr] gap-6`}>
+      <div
+        css={tw`grid grid-cols-[3fr 9fr 9fr] grid-rows-[auto 1fr] gap-3 lg:gap-6`}
+      >
         <img
           src={require('assets/images/intro-1.png').default}
           alt='Intro 1'
