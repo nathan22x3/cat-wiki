@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD041 -->
 
 <div align="center">
-  <img src="src/assets/images/logo.svg" width="200">
+  <img src="./src/assets/images/logo.svg" width="200">
 </div>
 
 <div align="center">
@@ -15,7 +15,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/P17crTRiwI9hY2LGPU7N">
       Solution
     </a>
     <span> | </span>
@@ -41,26 +41,25 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![Result](./src/assets/images/result.png)
 
 ### Built With
 
 - [React](https://reactjs.org/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Tailwind](https://tailwindcss.com/)
+- [Express.js](https://expressjs.com/)
 
 ## Features
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
-- [ ] **User story**: I can search for cat breeds and select a breed of my choice
-- [ ] **User story**: I can see the most popular searched cat breeds summary on the homepage
-- [ ] **User story**: I can see the top 10 most searched cat breeds
-- [ ] **User story**: I can see the breed details including description, temperament, origin, life span, adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly
-- [ ] **User story**: I can see more photo of the breed
-- [ ] **User story**: On mobile, when I select the search option, a modal for breed search should pop up
-- [ ] **User story** (optional): I can go to an article about cats when I click read more on Why you should have a cat section
-- [ ] **User story** (optional): I can go to the top 10 cats by clicking see more in the dashboard
+- [x] **User story**: You can search for cat breeds and select a breed of your choice
+- [x] **User story**: You can see the most popular searched cat breeds summary on the homepage
+- [x] **User story**: You can see the top 10 most searched cat breeds
+- [x] **User story**: You can see the breed details including description, temperament, origin, life span, adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly
+- [x] **User story**: You can see more photo of the breed
+- [x] **User story**: On mobile, when you select the search option, a modal for breed search should pop up
+- [x] **User story**: You can go to the top 10 cats by clicking see more in the dashboard
 
 ## How To Use
 
@@ -73,7 +72,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/nathan22x3/cat-wiki
 
 # Move to project directory
-cd cat-wiki
+$ cd cat-wiki
 
 # Install dependencies
 $ yarn

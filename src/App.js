@@ -1,6 +1,7 @@
 import Footer from 'containers/Footer';
-import BreedDetails from 'pages/BreedDetails';
+import BreedDetailsPage from 'pages/BreedDetailsPage';
 import HomePage from 'pages/HomePage';
+import TopBreedsPage from 'pages/TopBreedsPage';
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -25,7 +26,8 @@ const App = () => {
         <Switch>
           <Redirect exact path='/breed' to='/' />
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/breed/:name' component={BreedDetails} />
+          <Route exact path='/breed/:name' component={BreedDetailsPage} />
+          <Route exact path='/top-breeds' component={TopBreedsPage} />
         </Switch>
         <Footer />
       </Router>

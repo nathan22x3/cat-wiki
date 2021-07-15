@@ -1,17 +1,17 @@
 import LevelBar from 'components/LevelBar';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 /** @jsxImportSource @emotion/react */
 import tw from 'twin.macro';
 
-const BreedDetails = () => {
+const BreedDetailsPage = () => {
   const [data, setData] = useState(null);
   const [photo, setPhoto] = useState('');
   const [otherPhotos, setOtherPhotos] = useState([]);
 
   const { name } = useParams();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     (async () => {
       const res = await fetch(
         `https://api.thecatapi.com/v1/breeds/search?q=${name}`,
@@ -28,7 +28,7 @@ const BreedDetails = () => {
     return () => setData(null);
   }, [name]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     (async () => {
       const res = await fetch(
         `https://api.thecatapi.com/v1/images/${data?.reference_image_id}`,
@@ -40,6 +40,22 @@ const BreedDetails = () => {
       );
       const json = await res.json();
       setPhoto(json.url);
+
+      await fetch(
+        `https://cat-wiki-nathan22x3.herokuapp.com/breed/${data?.id}`,
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            id: data?.id,
+            name: data?.name,
+            image: json.url,
+            description: data?.description,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
     })();
 
     (async () => {
@@ -54,6 +70,7 @@ const BreedDetails = () => {
       const json = await res.json();
       setOtherPhotos(json);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (
@@ -151,4 +168,4 @@ const BreedDetails = () => {
   );
 };
 
-export default BreedDetails;
+export default BreedDetailsPage;
